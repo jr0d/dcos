@@ -48,7 +48,7 @@ def do_configure(config_path=CONFIG_PATH):
     except ExhibitorTLSBootstrapError as e:
         log.error('Failed to bootstrap Exhibitor TLS')
         for i, error in enumerate(e.errors):
-            return log.error("{}: {}".format(i+1, error))
+            return log.error("{}: {}".format(i + 1, error))
         return 1
     config_util.make_serve_dir(gen_out)
 
@@ -71,7 +71,7 @@ def generate_node_upgrade_script(installed_cluster_version, config_path=CONFIG_P
     except ExhibitorTLSBootstrapError as e:
         log.error('Failed to bootstrap Exhibitor TLS')
         for i, error in enumerate(e.errors):
-            return log.error("{}: {}".format(i+1, error))
+            return log.error("{}: {}".format(i + 1, error))
         return 1
 
     config_util.make_serve_dir(gen_out)
